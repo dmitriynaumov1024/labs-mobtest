@@ -7,7 +7,8 @@ public class StringDuplicator {
      */
     public String duplicate(String string) {
         // the bug is triplication instead of duplication
-        return string + string + string;
+        if (string == null) return null;
+        return string + string;
     }
 
 }
