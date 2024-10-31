@@ -67,8 +67,7 @@ public class DialerActivity extends Activity {
     private Intent createCallIntentFromNumber() {
         final Intent intentToCall = new Intent(Intent.ACTION_CALL);
         String number = mCallerNumber.getText().toString();
-        // the bug here is that number is duplicated.
-        intentToCall.setData(Uri.parse("tel:" + number + number));
+        intentToCall.setData(Uri.parse("tel:" + number));
         return intentToCall;
     }
 
